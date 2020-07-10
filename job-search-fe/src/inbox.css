@@ -1,0 +1,122 @@
+.button{
+    bottom: 0;
+    width:20%;
+    margin-left: 75%;
+    position: absolute;
+}
+.button-open{
+    bottom: 30%;
+    width:20%;
+    margin-left: 75%;
+    position: absolute;
+}
+.modal {
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  .chat-box{
+	position: fixed;
+	right: 300px;
+	bottom: 40px;
+	background: white;
+	width: 300px;
+	/* border-radius: 5px 5px 0px 0px; */
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.chat-head{
+	width: inherit;
+	height: 45px;
+	background: #2c3e50;
+	border-radius: 5px 5px 0px 0px;
+	position: fixed;
+	z-index: 5;
+}
+.chat-head h2{
+	color: white;
+	padding: 8px;
+	display: inline-block;
+}
+.chat-head img{
+	cursor: pointer;
+	float: right;
+	width: 25px;
+	margin: 10px;
+}
+.chat-body{
+	height: 355px;
+	width: inherit;
+	margin-bottom: 45px;
+}
+.chat-text{
+	position: fixed;
+	bottom: 20px;
+	height: 35px;
+	width: inherit;
+}
+.chat-text textarea{
+	width: inherit;
+	height: inherit; 
+	/* box-sizing: border-box; */
+	border: 1px solid #bdc3c7;
+	padding: 10px;
+	resize: none;
+}
+.chat-text textarea:active, .chat-text textarea:focus, .chat-text textarea:hover{
+	border-color: royalblue;
+}
+.msg-send{
+	background: #2ecc71;
+}
+.msg-receive{
+	background: #3498db;
+}
+.msg-send, .msg-receive{
+	width: 200px;
+	height: 35px;
+	padding: 5px 5px 5px 10px;
+	margin: 10px auto;
+	border-radius: 3px;
+	line-height: 30px;
+	position: relative;
+	color: white;
+}
+.msg-receive:before{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border: 15px solid;
+	border-color: transparent #3498db transparent transparent;
+	left: -29px;
+	top: 7px;
+}
+.msg-send:after{
+	content: '';
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	border: 15px solid;
+	border-color: transparent transparent transparent #2ecc71;
+	right: -29px;
+	top: 7px;
+}
+.msg-receive:hover, .msg-send:hover{
+	opacity: .9;
+}
+
+
+  

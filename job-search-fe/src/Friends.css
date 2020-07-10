@@ -1,0 +1,45 @@
+.request-list{
+    display:inline-flex
+}
+.square-2 {
+    height: 180px;
+    width: 25%;
+    padding-right: 4rem;
+    background-color: #555;
+    margin-left: 2rem;
+
+  }
+  .request-square {
+    height: 250px;
+    width: 250px;
+    background-color: #555;
+    margin-left: 20%;
+
+  }
+  .circle-2 {
+    margin-left: 25%;
+    height: 86px;
+    width: 86px;
+    background-color: blue;
+    border-radius: 50%;
+  }
+  .circle-3 {
+    margin-left: 35%;
+    margin-top: -6%;
+  
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+  }
+  .friends-card{
+    text-align:center
+  }
+  .friends-list{
+    display:inline-flex;
+    margin-left: 20%;
+}
+.friend{
+    width: 20%; 
+}
+  

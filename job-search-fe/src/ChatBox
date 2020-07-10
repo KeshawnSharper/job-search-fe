@@ -1,0 +1,81 @@
+import React, { useState,useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import { connect } from "react-redux"
+import { login,getUsers,getMessages,getExperiences,addExperiences,addProjects,getProjects,editProfile,editExperience,deleteExperience,editProjects} from "./action"
+import './ChatBox.css'
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
+import Modal from '@material-ui/core/Modal';
+
+
+
+  function ChatBox(props) {
+    console.log(props)
+    const [close, setClose] = useState(false);
+    // console.log(props.messagesList)
+     var first_name = props.messagesList[props.messagesList.length -1].first_name
+     var messagesList = props.messagesList.pop()
+     console.log(props.messagesList)
+      return (
+        <div>
+        {
+    <div className="wrapper">
+		<div className="chat-box">
+      
+
+			<div className="chat-head" onClick={e => setClose(!close)}>
+        
+				<h2>{first_name}</h2>
+			</div>
+      {
+        !close ? 
+			<div className="chat-body">
+				<div className="msg-insert">
+{props.messagesList.map(
+  e => (
+    <div className={props.user.id === e.users_id ? "msg-receive" : "msg-send"}> {e.note} </div>
+  )
+)}
+</div>
+				<div className="chat-text">
+					<textarea placeholder="Send"></textarea>
+				</div>
+			</div>
+      : <div> </div>
+      }
+		</div>
+    </div>
+
+      }
+      </div>
+      )
+      }
+  function mapStateToProps (state){
+    return {
+    user:state.user,
+    users:state.users,
+    experiences:state.experiences,
+    projects:state.projects,
+    messages:state.messages
+    }
+  }
+  const mapDispatchToProps = {
+    login,
+    getExperiences,
+    addExperiences,
+    addProjects,
+    getProjects,
+    editProfile,
+    editExperience,
+    deleteExperience,
+    editProjects,
+    getMessages,
+    getUsers
+  }
+  export default connect(mapStateToProps,mapDispatchToProps)(ChatBox);

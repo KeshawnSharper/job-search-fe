@@ -1,0 +1,198 @@
+// li{
+//   list-style-type: none;
+// }
+// img{
+//   margin-top: -2rem;
+//   width: 13rem;
+//   border-radius: 50%
+// }
+// .experience{
+//   display: inline-flex;
+// }
+// p{
+//   margin-left: 2rem;
+// }
+// button{
+//   margin-top: -3rem;
+// }
+// textarea{
+//   margin-top: -5rem;
+// }
+/*Global Styles
+----------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+h1,h2 {
+  font-family: 'Caveat', cursive;
+  font-weight: 400px;
+}
+h1 {
+    font-size: 80px;   
+}
+
+h2 {
+    font-size: 40px; 
+    margin-top: 0;
+}
+h3 {
+ margin: 0;   
+}
+a {
+   color: #EF233C; 
+}
+
+a:hover {
+   text-decoration: none;    
+}
+
+.content-wrap {
+    max-width: 950px;  
+    margin: 0 auto;
+    padding: 60px 50px;
+    overflow: hidden;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+/*Download button*/
+.btn {
+   text-decoration: none;
+   background: #BF233C;
+   color: white;
+   padding: 10px;
+   display: inline-block;
+}
+
+/*Header and Footer 
+----------------------------*/
+header, footer {
+ background:#2B2D42; 
+ color:#8D99AE;
+    
+}
+/*header*/
+
+header {
+   padding-top: 50px;
+   position: relative;
+}
+
+header h1, header h2 {
+    color: #EDF2F4;
+    margin: 0;
+}
+
+.profile-img {
+   border-radius: 50%;
+   }
+
+.download {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*footer*/
+
+footer {
+    text-align: center;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Navigation
+----------------------------*/
+
+nav {
+    text-align: center;
+    background: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+
+/*Work Experience
+----------------------------*/
+.work {
+ background:#EDF2F4;    
+}
+
+h3 ~ p {
+   margin: 0; 
+}
+
+h2 ~ p {
+   margin: 0; 
+}
+
+
+.job-description {
+ margin-bottom: 25px;   
+}
+
+
+.job-description p:first-of-type {
+    margin-top: 0;
+}
+
+/*Education
+----------------------------*/
+.education {
+    /*background:#BD99AE;*/
+   background: Linear-gradient(rgba(189, 153, 174, 0.7), rgba(189, 153, 174, 0.6)), url(http://eskipaper.com/images/starry-sky-2.jpg) no-repeat fixed;
+    background-size: cover;
+
+}
+
+p + h3 {
+   margin-top: 30px; 
+}
+
+/*MediaQueries*/
+
+@media (min-width: 900px){
+.col-narrow {
+    width: 30%; 
+    float: left;
+    }
+.col-wide {
+    width: 70%; 
+    float: right;
+    padding-left: 20px;
+    }
+}
+
+@media (max-width: 899px){
+    header {
+     text-align: center;
+    }
+    .profile-img {
+     width: 200px;
+    }
+}
+
+
+
+
